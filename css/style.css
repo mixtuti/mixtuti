@@ -32,6 +32,7 @@ h2 h3 {
 
 p {
   text-indent: 1em;
+  margin: 10px 0 10px 0;
 }
 
 p::selection {
