@@ -39,6 +39,16 @@ p::selection {
   background-color: #1abc9c;
 }
 
+td::selection {
+  color: #fff;
+  background-color: #1abc9c;
+}
+
+th::selection {
+  color: #fff;
+  background-color: #1abc9c;
+}
+
 b::selection {
   color: #fff;
   background-color: #1abc9c;
