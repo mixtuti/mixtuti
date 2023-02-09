@@ -516,6 +516,7 @@ input[type="radio"] {
 [value="win"]:checked ~ .filters [for="win"],
 [value="unityroom"]:checked ~ .filters [for="unityroom"],
 [value="itch.io"]:checked ~ .filters [for="itch.io"],
+[value="booth"]:checked ~ .filters [for="booth"],
 [value="other"]:checked ~ .filters [for="other"] {
   background: #1abc9c;
   color: #fff;
@@ -531,6 +532,7 @@ input[type="radio"] {
 [value="mac"]:checked ~ .targets .target:not([data-category~="mac"]),
 [value="win"]:checked ~ .targets .target:not([data-category~="win"]),
 [value="itch.io"]:checked ~ .targets .target:not([data-category~="itch.io"]),
+[value="booth"]:checked ~ .targets .target:not([data-category~="booth"]),
 [value="unityroom"]:checked
   ~ .targets
   .target:not([data-category~="unityroom"]),
