@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ja">
+<!-- InstanceBegin template="/Templates/Cadence.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <!-- InstanceBeginEditable name="meta" -->
+    <meta name=”description“ content="OBUGYO" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#1ABC9C">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mixtuti_mochi" />
+    <meta property="og:url" content="https://mixtuti.github.io/mixtuti/portfolio/ose.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="mixtuti | OBUGYO" />
+    <meta property=”og:description“ content="OBUGYO" />
+    <meta property="og:site_name" content="mixtuti" />
+    <meta property="og:image" content="https://mixtuti.github.io/mixtuti/img/favcon.png" />
+    <!-- InstanceEndEditable -->
+    <!-- Stylesheet  ============================================= -->
+    <link
+        href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css">
+    <!-- InstanceBeginEditable name="edit" -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../img/favcon.png">
+    <!-- InstanceEndEditable -->
+    <!-- Document Title　============================================= -->
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>mixtuti | OBUGYO</title>
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+    <!-- InstanceBeginEditable name="head" -->
+    <header>
+        <div class="Two-column">
+            <div class="left-header">
+
+                <p><a href="../index.html"><img src="../img/favcon.png" alt="icon" class="Logo"></a></p>
+            </div>
+            <div class="right-header">
+                <p align="center">
+                <table width="100%">
+                    <ul class="menu">
+                        <li><a href="../index.html" target="_parent">トップページ</a></li>
+                        <li><a href="../portfolio/index.html" target="_parent">作品</a></li>
+                        <li><a href="../link.html" target="_parent">リンク</a></li>
+                    </ul>
+                </table>
+                </p>
+            </div>
+        </div>
+        <!-- <hr> -->
+    </header>
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="body" -->
+    <div>
+        <img src="../img/IMG_0093.png" style="width: 100%;">
+    </div>
+    <div id="main">
+        <h2 class="title-U-line">OBUGYO</h2>
+        <section id="main-works">
+            <div class="Two-column">
+                <div class="left">
+                    <img src="../img/IMG_0092.png" alt="Ouse" width=90% style="display: block; margin: auto;">
+                </div>
+
+                <div class="right" style="align-items:center; display:flex; ">
+                    <p>鍋奉行として鍋を仕切り、相手をもてなすゲーム</p>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <p>このゲームは2022年に開催された「ぼっち・ざ・ゲームジャム」にて制作したゲームです。主要制作期間は約2日間で、メンバーは5人です。</p>
+
+            <h3>・概要</h3>
+            <p>このゲームは、鍋奉行をおもてなしするというゲームで、鍋奉行にはいくつかの種類ができる予定です。まだ制作中です。完成をお楽しみにお待ちください。</p>
+
+            <h3>・操作方法</h3>
+            <p>マウスクリックで食材をつかみ、鍋に入れる。食材が茹だったら、マウスクリックで掴み、手前のお椀に入れる。お椀クリックで振る舞う。</p>
+
+            <h3>・スクリーンショット</h3>
+
+            <ul class="slider">
+                <li><img src="../img/IMG_0092.png" alt=""></li>
+                <li><img src="../img/IMG_0093.png" alt=""></li>
+                <li><img src="../img/IMG_0094.png" alt=""></li>
+                <li><img src="../img/IMG_0095.jpg" alt=""></li>
+            </ul>
+
+            <h3>・ゲームプレイリンク</h3>
+            <a href="https://drive.google.com/file/d/1WGVZPe3n0kg6SKhTaM0t4vEDej02Uay0/view"
+                class="button button-3d button-mini button-rounded button-red" style="color:#fff;">Mac</a>
+            <a href="https://drive.google.com/file/d/14qP2wXWlAk9xFzIE12dhBAPq7q8kal4w/view"
+                class="button button-3d button-mini button-rounded button-blue" style="color:#fff;">Win</a>
+
+            <div class="ma"></div>
+
+            <div class="Two-column">
+                <div class="left">
+<pre><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class IntroLoopAudio : MonoBehaviour {
+    [Header("イントロ"),SerializeField] private AudioClip AudioClipIntro;
+    [Header("ループ部分"),SerializeField] private AudioClip AudioClipLoop;
+
+    //BGM のイントロ部分の AudioSource
+    private AudioSource _introAudioSource;
+
+    //BGM のループ部分の AudioSource。
+    private AudioSource[] _loopAudioSources = new AudioSource[2];
+
+    //一時停止中かどうか。
+    private bool _isPause;
+
+    //現在の再生するループ部分のインデックス。
+    private int _nowPlayIndex = 0;
+
+    //ループ部分に使用する AudioSource の数。
+    private int _loopSourceCount = 0;
+
+    //再生中であるかどうか。一時停止、非アクティブの場合は false を返す。
+    private bool IsPlaying => (_introAudioSource.isPlaying || _introAudioSource.time > 0) || (_loopAudioSources[0].isPlaying || _loopAudioSources[0].time > 0) || (_loopAudioSources[1] != null && (_loopAudioSources[1].isPlaying || _loopAudioSources[1].time > 0));
+
+    //現在アクティブで再生しているループ側の AudioSource。
+    private AudioSource LoopAudioSourceActive => _loopAudioSources[1] != null && _loopAudioSources[1].time > 0 ? _loopAudioSources[1] : _loopAudioSources[0];
+
+    //現在の再生時間 (s)。
+    public float time
+    => _introAudioSource == null ? 0
+        : _introAudioSource.time > 0 ? _introAudioSource.time
+        : LoopAudioSourceActive.time > 0 ? AudioClipIntro.length + LoopAudioSourceActive.time
+        : 0;
+
+    void Start(){
+        _loopSourceCount = 2; // WebGL でなければ 1 でもよい
+
+        // AudioSource を自身に追加
+        _introAudioSource = gameObject.AddComponent<AudioSource>();
+        _loopAudioSources[0] = gameObject.AddComponent<AudioSource>();
+        if (_loopSourceCount >= 2) {
+            _loopAudioSources[1] = gameObject.AddComponent<AudioSource>();
+        }
+
+        _introAudioSource.clip = AudioClipIntro;
+        _introAudioSource.loop = false;
+        _introAudioSource.playOnAwake = false;
+
+        _loopAudioSources[0].clip = AudioClipLoop;
+        _loopAudioSources[0].loop = _loopSourceCount == 1;
+        _loopAudioSources[0].playOnAwake = false;
+        if (_loopAudioSources[1] != null){
+            _loopAudioSources[1].clip = AudioClipLoop;
+            _loopAudioSources[1].loop = false;
+            _loopAudioSources[1].playOnAwake = false;
+        }
+
+        Play();
+    }
+
+    void Update() {
+        // WebGL のためのループ切り替え処理
+        if (_loopSourceCount >= 2) {
+            // 終了する１秒前から次の再生のスケジュールを登録する
+            if (_nowPlayIndex == 0 && _loopAudioSources[0].time >= AudioClipLoop.length - 1){
+                _loopAudioSources[1].PlayScheduled(AudioSettings.dspTime + (AudioClipLoop.length -
+                _loopAudioSources[0].time));
+                _nowPlayIndex = 1;
+            }
+            else if (_nowPlayIndex == 1 && _loopAudioSources[1].time >= AudioClipLoop.length - 1) {
+                _loopAudioSources[0].PlayScheduled(AudioSettings.dspTime + (AudioClipLoop.length -
+                _loopAudioSources[1].time));
+                _nowPlayIndex = 0;
+            }
+        }
+    }
+
+    public void Play(){
+        // クリップが設定されていない場合は何もしない
+        if (_introAudioSource == null || _loopAudioSources == null) return;
+
+        // Pause 中は isPlaying は false
+        if (_isPause){
+            _introAudioSource.UnPause();
+            if (_introAudioSource.isPlaying) {
+                // イントロ中ならループ開始時間を残り時間で再設定
+                _loopAudioSources[0].Stop();
+                _loopAudioSources[0].PlayScheduled(AudioSettings.dspTime + AudioClipIntro.length - _introAudioSource.time);
+            }
+            else {
+                if (_loopSourceCount >= 2) {
+                    // WebGL の場合は切り替え処理を実行
+                    if (_loopAudioSources[0].time > 0) {
+                        _loopAudioSources[0].UnPause();
+                        if (_loopAudioSources[0].time >= AudioClipLoop.length - 1) {
+                            _loopAudioSources[1].Stop();
+                            _loopAudioSources[1].PlayScheduled(AudioSettings.dspTime + (AudioClipLoop.length -
+                            _loopAudioSources[0].time));
+                            _nowPlayIndex = 1;
+                        }
+                    }
+                    else {
+                        _loopAudioSources[1].UnPause();
+                        if (_loopAudioSources[1].time >= AudioClipLoop.length - 1) {
+                            _loopAudioSources[0].Stop();
+                            _loopAudioSources[0].PlayScheduled(AudioSettings.dspTime + (AudioClipLoop.length - _loopAudioSources[0].time));
+                            _nowPlayIndex = 0;
+                        }
+                    }
+                }
+                else{
+                    // WebGL 以外は UnPause するだけ
+                    _loopAudioSources[0].UnPause();
+                }
+            }
+        }
+        else if (IsPlaying == false){
+            // 最初から再生
+            Stop();
+            _introAudioSource.Play();
+
+            // イントロの時間が経過した後に再生できるようにする
+            // 設定する時間はゲーム刑か時間での設定となる
+            _loopAudioSources[0].PlayScheduled(AudioSettings.dspTime + AudioClipIntro.length);
+        }
+
+        _isPause = false;
+    }
+
+    public void Pause() {
+        if (_introAudioSource == null || _loopAudioSources == null) return;
+        _introAudioSource.Pause();
+        _loopAudioSources[0].Pause();
+        if (_loopAudioSources[1] != null) _loopAudioSources[1].Pause();
+        _isPause = true;
+    }
+
+    public void Stop() {
+        if (_introAudioSource == null || _loopAudioSources == null) return;
+        _introAudioSource.Stop();
+        _loopAudioSources[0].Stop();
+        if (_loopAudioSources[1] != null) _loopAudioSources[1].Stop();
+        _isPause = false;
+    }
+}</code></pre>
+                </div>
+                <div class="right">
+                    <p>今回一番力を入れたのはこのスクリプトです。Unityでは、イントロ付きのBGMの再生が出来ませんでした。そこをなんとかしたいと思い、今回色々調べながら、完成させました。</p>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- InstanceEndEditable -->
+
+    <!-- InstanceBeginEditable name="footer" -->
+    <footer id="footer" class="dark">
+        <div id="copyrights">
+            <div class="container clearfix">
+                <div class="col_half">
+                    <!-- Copyrights　============================================= -->
+                    Copyrights &copy; mixtuti 2023<br>
+                    <a href="../index.html">About This Circle</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- InstanceEndEditable -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+<!-- InstanceEnd -->
+
+</html>
