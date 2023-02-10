@@ -1519,6 +1519,7 @@ textarea.c-form__input {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
+
 .button.button-3d {
   border-radius: 3px;
   border-bottom: 3px solid rgba(0, 0, 0, 0.15);
@@ -1576,4 +1577,13 @@ textarea.c-form__input {
   letter-spacing: 1px;
   border: none;
   text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+}
+
+pre {
+  margin: 1em 0; /* ブロック前後の余白 */
+  padding: 1em; /* ブロック内の余白 */
+  border-radius: 5px; /* 角丸 */
+  background: #25292f; /* 背景色 */
+  color: #fff; /* 文字色 */
+  white-space: pre-wrap; /* はみ出たときに折り返す */
 }
