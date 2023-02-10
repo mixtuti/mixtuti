@@ -508,6 +508,7 @@ input[type="radio"] {
 }
 /* フィルタリング  */
 [value="All"]:checked ~ .filters [for="All"],
+[value="recommend"]:checked ~ .filters [for="recommend"],
 [value="sound"]:checked ~ .filters [for="sound"],
 [value="event"]:checked ~ .filters [for="event"],
 [value="movie"]:checked ~ .filters [for="movie"],
@@ -525,6 +526,9 @@ input[type="radio"] {
 [value="All"]:checked ~ .targets [data-category] {
   display: block;
 }
+[value="recommend"]:checked
+  ~ .targets
+  .target:not([data-category~="recommend"]),
 [value="sound"]:checked ~ .targets .target:not([data-category~="sound"]),
 [value="event"]:checked ~ .targets .target:not([data-category~="event"]),
 [value="movie"]:checked ~ .targets .target:not([data-category~="movie"]),
@@ -1586,4 +1590,5 @@ pre {
   background: #25292f; /* 背景色 */
   color: #fff; /* 文字色 */
   white-space: pre-wrap; /* はみ出たときに折り返す */
+  user-select: none;
 }
