@@ -79,16 +79,18 @@ li {
 }
 
 #main {
-  /*	display:flex;*/
   width: 90%;
   margin: 5px auto;
-  /*	background: #dff;*/
 }
 
 .choice::selection {
   color: #fff;
   background-color: #3abec1;
 }
+
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------
 	Logo
@@ -112,12 +114,16 @@ li {
 
 .left-header {
   width: 10%;
+  background-color: white;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 .right-header {
   width: 90%;
   align-items: flex-end;
   padding-top: 3%;
+  background-color: white;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 @media screen and (min-width: 1200px) {
@@ -519,6 +525,7 @@ input[type="radio"] {
 [value="unityroom"]:checked ~ .filters [for="unityroom"],
 [value="itch.io"]:checked ~ .filters [for="itch.io"],
 [value="booth"]:checked ~ .filters [for="booth"],
+[value="apk"]:checked ~ .filters [for="apk"],
 [value="other"]:checked ~ .filters [for="other"] {
   background: #1abc9c;
   color: #fff;
@@ -538,6 +545,7 @@ input[type="radio"] {
 [value="win"]:checked ~ .targets .target:not([data-category~="win"]),
 [value="itch.io"]:checked ~ .targets .target:not([data-category~="itch.io"]),
 [value="booth"]:checked ~ .targets .target:not([data-category~="booth"]),
+[value="apk"]:checked ~ .targets .target:not([data-category~="apk"]),
 [value="unityroom"]:checked
   ~ .targets
   .target:not([data-category~="unityroom"]),
