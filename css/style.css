@@ -79,18 +79,16 @@ li {
 }
 
 #main {
+  /*	display:flex;*/
   width: 90%;
   margin: 5px auto;
+  /*	background: #dff;*/
 }
 
 .choice::selection {
   color: #fff;
   background-color: #3abec1;
 }
-
-/* ----------------------------------------------------------------
-	Header
------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------
 	Logo
@@ -114,16 +112,12 @@ li {
 
 .left-header {
   width: 10%;
-  background-color: white;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 .right-header {
   width: 90%;
   align-items: flex-end;
   padding-top: 3%;
-  background-color: white;
-  /* border-bottom: 1px solid #ccc; */
 }
 
 @media screen and (min-width: 1200px) {
@@ -1589,14 +1583,4 @@ textarea.c-form__input {
   letter-spacing: 1px;
   border: none;
   text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
-}
-
-pre {
-  margin: 1em 0; /* ブロック前後の余白 */
-  padding: 1em; /* ブロック内の余白 */
-  border-radius: 5px; /* 角丸 */
-  background: #25292f; /* 背景色 */
-  color: #fff; /* 文字色 */
-  white-space: pre-wrap; /* はみ出たときに折り返す */
-  user-select: none;
 }
