@@ -229,6 +229,11 @@ ul.menu a:hover {
   /*    background: #9ddbfc;*/
 }
 
+.center-Photo {
+  align-items: center;
+  display: flex;
+}
+
 @media screen and (max-width: 1136px) {
   /*	767*/
   .Two-column {
