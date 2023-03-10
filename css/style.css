@@ -1638,3 +1638,11 @@ textarea.c-form__input {
   border: none;
   text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
 }
+
+#pagetop {
+  position: fixed;
+  right: 10px;
+  bottom: 0px;
+  cursor: pointer;
+  z-index: 10;
+}
