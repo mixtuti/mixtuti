@@ -90,7 +90,7 @@
                         </tr>
                         <tr>
                             <th>制作人数</th>
-                            <td>4人</td>
+                            <td>4人(プログラマー:2 3DCG:1 2DCG:1)</td>
                         </tr>
                         <tr>
                             <th>担当箇所</th>
@@ -125,66 +125,7 @@
             <h3>・担当した箇所のソースコード</h3>
             <div class="Two-column">
                 <div class="left">
-<pre><code>using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class DeleteObject : MonoBehaviour {
-    public Score ScoreSclipt;
-    string Judge = "Bad";
-    bool time = false;
-    public GameObject particleObject;
-
-    void Start() { //0.1秒待つ処理
-        Invoke(nameof(Stay), 0.1f);
-    }
-
-    bool Stay() {
-        time = true;
-        return time;
-    }
-
-    void OnCollisionStay(Collision other) { //何かに触れている時の処理
-        if (other.gameObject.tag == "speaker") { //相手側のスピーカーに触れた時の処理
-            if (Stay() == true) {
-                Destroy(gameObject);
-                Judge = "Miss";
-                Debug.Log("1PMiss");
-            }
-        }
-        else if (other.gameObject.tag == "2Pspeaker") { //相手側のスピーカーに触れた時の処理
-            if (Stay() == true) {
-                Destroy(gameObject);
-                Judge = "Miss";
-                Debug.Log("2PMiss");
-            }
-        }
-    }
-
-    void OnDestroy() { //消された時の処理
-        if (Judge == "Good") {
-            ScoreSclipt.Score1P(1000);
-        }
-        if (Judge == "Bad") {
-            ScoreSclipt.Score1P(500);
-        }
-        Instantiate(particleObject, this.transform.position, Quaternion.identity);
-        Debug.Log(Judge);
-    }
-
-    void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Line") {
-            Judge = "Good";
-        }
-    }
-
-    void OnTriggerExit(Collider other) {
-        if (other.gameObject.tag == "Line") {
-            Judge = "Bad";
-        }
-    }
-}</code></pre>
+                    <script src="https://gist.github.com/mixtuti/2473e5648b538b778b4f55cf4b116ad7.js"></script>
                 </div>
                 <div class="right">
                     <p>DeleteObjectのスクリプトは、プレイヤーが発射するオブジェクトにアタッチして使います。相手が処理できずにスピーカーに当たった場合にミスの判定を出し、消された時は、パーティクルを呼び出し、消滅します。</p>
@@ -194,68 +135,7 @@ public class DeleteObject : MonoBehaviour {
 
             <div class="Two-column">
                 <div class="left">
-<pre><code>using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-using AudioManager;
-
-public class LoadingScene : MonoBehaviour
-{
-    //　非同期動作で使用するAsyncOperation
-    private AsyncOperation async;
-
-    [Header("ロード中に表示する画面"),SerializeField] private GameObject loadUI;//　シーンロード中に表示するUI画面 
-    [Header("進捗バー"),SerializeField] private Slider slider; //　読み込み率を表示するスライダー
-    [Header("次のシーン")] public SceneReference m_scene;
-    [Header("次のシーン削除するオブジェクト"),SerializeField] List&lt;GameObject&gt; list = new List&lt;GameObject&gt;();
-
-    void Start()
-    {
-        for (int i = 0; i &lt; list.Count; i++) { 
-            list[i].SetActive(true); 
-        } 
-    } 
-        
-    void Update() {
-        if(SceneManager.GetActiveScene().name !="LoadScene" || SceneManager.GetActiveScene().name !="Result" ){
-            if(Input.GetKeyDown("joystick button 7")){ 
-                NextScene(); 
-            } 
-        } 
-        else{ 
-            if(Input.GetKeyDown("joystick button 2")){
-                NextScene(); 
-            } 
-        } 
-    } 
-        
-    public void NextScene() { //　それぞれの画面UIをアクティブにする 
-        loadUI.SetActive(true);
-        slider.gameObject.SetActive(true); 
-        if (SceneManager.GetActiveScene().name=="LoadScene" ) {
-            SEManager.Instance.Play(SEPath.SGF_MSE_DECISION); 
-            BGMManager.Instance.Play(BGMPath.GARAGE_BAND_15TH_SGF3); 
-        }
-        else{  
-            SEManager.Instance.Play(SEPath.SGF_MSE_RETURN); 
-        } 
-        //　コルーチンを開始 
-        StartCoroutine("LoadData"); 
-    }
-            
-    IEnumerator LoadData() { // シーンの読み込みをする
-        async=SceneManager.LoadSceneAsync(m_scene); //　読み込みが終わるまで進捗状況をスライダーの値に反映させる 
-        while (!async.isDone) { 
-            var progressVal=Mathf.Clamp01(async.progress / 0.9f); 
-            slider.value=progressVal;
-            yield return null; 
-        } 
-    }  
-}
-</code></pre>    
+                    <script src="https://gist.github.com/mixtuti/fb36767fd458b3301fcb1fdcca3af540.js"></script>
                 </div>
                 <div class="right">
                     <p>LoadingSceneのスクリプトも、今回かなり力を入れたスクリプトで、主に画面遷移時に使用します。</p>

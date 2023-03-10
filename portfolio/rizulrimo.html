@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css">
     <!-- InstanceBeginEditable name="edit" -->
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="../img/favcon.png">
@@ -92,7 +91,7 @@
                         </tr>
                         <tr>
                             <th>制作人数</th>
-                            <td>9人</td>
+                            <td>9人(プランナー:3 プログラマー:3 デザイナー:3)</td>
                         </tr>
                         <tr>
                             <th>担当箇所</th>
@@ -181,129 +180,12 @@
         <p>今回は、リズムゲームの部分を担当しました。そのうちの一部のスクリプトを紹介します。</p>
         <div class="Two-column">
             <div class="left">
-<pre><code>using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
-
-public class CSVWriter : MonoBehaviour {
-    public string fileName;
-
-    public void WriteCSV(string txt){
-        StreamWriter streamWriter;
-        FileInfo fileInfo;
-        fileInfo = new FileInfo (Application.dataPath +"/"+ fileName + ".csv");
-        streamWriter = fileInfo.AppendText ();
-        streamWriter.WriteLine (txt);
-        streamWriter.Flush();
-        streamWriter.Close ();
-    }
-}</code></pre>
+                <script src="https://gist.github.com/mixtuti/99963966f712d633540e639044d21433.js"></script>
             </div>
             <div class="right">
                 <p>CSVWriterは、今回担当した中で一番苦労したスクリプトです。指定したCSVファイルにノーツの出るタイミングと場所のデータを書き込むというスクリプトです。</p>
                 <p>今回は、あまり時間がなく、ノーツをもう少し計算して配置できなかったことが悔やまれます。</p>
                 <p>あとは、それをステージの数だけ生成し、各ステージでそのCSVファイルをもとにノーツを生成しています。</p>
-            </div>
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="Two-column">
-            <div class="left">
-<pre><code>function myFunction() {
-    // 基準となる時間
-    const now = new Date();
-
-    // 対象のGoogle Driveの対象フォルダIDを指定
-    // DriveのIDに置き換えてください。
-    const root = DriveApp.getFolderById('*****');
-
-    // rootフォルダから調査開始
-    scanFolder(root, now);
-}
-
-// 指定フォルダ内の調査
-function scanFolder(rootFolder, now) {
-    // フォルダ内のファイル一覧を取得
-    const files = rootFolder.getFiles();
-
-    // files内で最近作成されたものを探してDiscordに送信
-    judgeFile(files, now);
-
-    // フォルダ内のフォルダ一覧を取得
-    const folders = rootFolder.getFolders();
-
-    // それぞれのフォルダについてscanFolderを実行
-    while (folders.hasNext()) {
-        const folder = folders.next();
-        scanFolder(folder, now);
-    }
-}
-
-// アップロード時間を判定
-function judgeFile(files, now) {
-    // すべてのファイルについてアップロード時間を判定
-    while (files.hasNext()) {
-        const file = files.next();
-
-        // ファイルの作成（アップロード）時間を取得
-        const createDate = file.getDateCreated();
-
-        // 分単位で差分を計算
-        const timeDiff = (now.getTime() - createDate.getTime()) / (60 * 1000);
-        
-        // 1分以内に作成されたファイルだったとき
-        if (1 >= timeDiff) {
-            // Log出力
-            Logger.log(file.getName());
-            
-            // Discordに送信
-            sendDiscord(
-                [{
-                    "title": "新しいファイルがアップロードされました",
-                    "color": 1127128,
-                    "fields":
-                    [{
-                        "name": "ファイル名",
-                        "value": file.getName()
-                    },
-                    {
-                        "name": "URL",
-                        "value": file.getDownloadUrl()
-                    }]
-                }]
-            )
-        }
-    }
-}
-
-function sendDiscord(embeds) {
-
-    // webhookのURLを入れてください。
-    const webhookUrl = 'https://discord.com/api/webhooks/*******';
-    const username = 'Drive速報【ドラ速】';
-    const jsonData = {
-        "username": username,
-        "embeds": embeds
-    };
-
-    const payload = JSON.stringify(jsonData);
-    const options = {
-        "method": "post",
-        "contentType": "application/json",
-        "payload": payload
-    };
-    UrlFetchApp.fetch(webhookUrl, options);
-}
-</code></pre>
-            </div>
-            <div class="right">
-                <p>このスクリプトは、ドライブに上がったファイルを検知し、Discordに通知を送ってくれるBotのスクリプトです。</p>
-                <p>制作を進めていく上で、毎回素材の場所を探すのが大変に思い、楽にしたいという思いから制作してみました。</p>
-                <p>使用したイメージは下の画像の感じです。</p>
-                <img src="../img/IMG_0091.png" alt="">
-                <p>URLをクリックすると自動でダウンロードが始まるため、ファイルを探す必要もなく作業に集中することができたと個人的に思っています。</p>
             </div>
         </div>
     </div>
@@ -326,8 +208,6 @@ function sendDiscord(embeds) {
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../js/slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 <!-- InstanceEnd -->
 

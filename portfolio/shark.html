@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css"> -->
     <!-- InstanceBeginEditable name="edit" -->
     <link href="../css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="../img/favcon.png">
@@ -89,7 +89,7 @@
                         </tr>
                         <tr>
                             <th>制作人数</th>
-                            <td>9人</td>
+                            <td>9人(プランナー:1 グラフィッカー:4 プログラマー:3)</td>
                         </tr>
                         <tr>
                             <th>担当箇所</th>
@@ -152,45 +152,7 @@
 
             <div class="Two-column">
                 <div class="left">
-<pre><code>
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyGenerator : MonoBehaviour {
-    EnemyDataList enemyData;
-    [Header("敵データ"),SerializeField] public EnemyDataList enemyDataList;
-    [SerializeField] enemy_move enemymove_OBJ;
-    private int number;
-    [Header("生成する範囲A"),SerializeField] private Transform rangeA;
-    [Header("生成する範囲B"),SerializeField] private Transform rangeB;
-    private float time; // 経過時間
-    [Header("生成インターバル")] public int GeneratTime;
-
-    void Update() {
-        // 前フレームからの時間を加算していく
-        time = time + Time.deltaTime;
-
-        // ランダムに生成されるようにする。
-        if (time > GeneratTime) {
-            // rangeAとrangeBの各座標の範囲内でランダムな数値を作成
-            float x = Random.Range(rangeA.position.x, rangeB.position.x);
-            float y = Random.Range(rangeA.position.y, rangeB.position.y);
-            float z = Random.Range(rangeA.position.z, rangeB.position.z);
-
-            // 生成するオブジェクトをランダムにする
-            number = Random.Range(0, enemyDataList.EnemyStatusList.ToArray().Length);
-            // GameObjectを上記で決まったランダムな場所に生成
-            enemy_move OBJ = Instantiate(enemymove_OBJ, new Vector3(x, y, z), Quaternion.identity);
-            OBJ.enemyData = enemyDataList.EnemyStatusList[number];
-            OBJ.SetUP();
-
-            // 経過時間リセット
-            time = 0f;
-        }
-    }
-}
-</code></pre>
+                    <script src="https://gist.github.com/mixtuti/584573e9641acd936f7752165d1fb901.js"></script>
                 </div>
                 <div class="right">
                     <p>EnemyGeneratorは、慣れないスクリタブルオブジェクトに苦労しながら作成したスクリプトです。</p>
@@ -202,34 +164,10 @@ public class EnemyGenerator : MonoBehaviour {
 
             <div class="Two-column">
                 <div class="left">
-<pre><code>using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class Timer : MonoBehaviour {
-    public static float time;
-    public Text TimeText;
-    public bool isCount = false;
-
-    void Start() {
-        time = 0.0f;
-    }
-
-    void Update() {
-        if(isCount == false){
-            time += Time.deltaTime;
-            TimeText.text = time.ToString("F2");
-        }
-    }
-
-    public static float getTime(){
-        return time;
-    }
-}</code></pre>
+                    <script src="https://gist.github.com/mixtuti/3a6079c2806f63f2d92d593a2ffcd991.js"></script>
                 </div>
                 <div class="right">
-<pre><code>using System.Collections;
+<!-- <pre><code>using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -242,7 +180,8 @@ public class GetTimer : MonoBehaviour {
         time = Timer.getTime();
         TimeText.text = time.ToString("F2");
     }
-}</code></pre>
+}</code></pre> -->
+                    <script src="https://gist.github.com/mixtuti/a734a468040bcb191b326a3f6ea82173.js"></script>
                 </div>
             </div>
 
@@ -273,8 +212,8 @@ public class GetTimer : MonoBehaviour {
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../js/slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script> -->
 </body>
 <!-- InstanceEnd -->
 
