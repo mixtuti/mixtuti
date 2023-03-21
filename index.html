@@ -75,6 +75,8 @@
                                         <p>最近では、<a
                                                 href="https://oecusoundserver.github.io/Cadence/index.html"><u>同人サークル「Cadence」</u></a>の代表として、イベント出展などを計画しています。
                                         </p>
+
+                                        <canvas id="myChart" style="width: 50%;"</canvas>
                                     </div>
 
                                     <div class="right">
@@ -293,6 +295,33 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/pagetop.js"></script>
+    <script src="js/chart.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Unity", "git / Sourcetree" ,"Unreal Engine", "CUBASE", "Photoshop", "Illustrator"],
+                datasets: [{
+                    label: "使用できるソフト",
+                    data: [4, 3, 2, 4, 4, 3],
+                    backgroundColor: "rgba(67, 133, 215, 0.5)",  //グラフ背景色
+                    borderColor: "rgba(67, 133, 215, 1)",        //グラフボーダー色
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        max: 5,        //グラフの最大値
+                        min: 0,        //グラフの最小値
+                        ticks: {
+                            stepSize: 1  //目盛間隔
+                        }
+                    }
+                },
+            }
+        });
+    </script>
 </body>
 <!-- InstanceEnd -->
 
