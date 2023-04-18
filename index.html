@@ -5,7 +5,8 @@
 <head prefix="og: https://ogp.me/ns#">
     <meta charset="UTF-8">
     <!-- InstanceBeginEditable name="meta" -->
-    <meta name=”description“ content="トップページ" />
+    <!-- SEO -->
+    <!-- <meta name=”description“ content="トップページ" />
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#1ABC9C">
     <meta name="twitter:card" content="summary" />
@@ -15,27 +16,73 @@
     <meta property="og:title" content="mixtuti | トップページ" />
     <meta property=”og:description“ content="トップページ" />
     <meta property="og:site_name" content="mixtuti" />
-    <meta property="og:image" content="https://mixtuti.github.io/mixtuti/img/favcon.png" />
+    <meta property="og:image" content="https://mixtuti.github.io/mixtuti/img/favcon.png" /> -->
+    <title>mixtuti | トップページ</title>
+    <meta name="description" content="トップページです。">
+    <meta name="keywords" content="mixtuti,ポートフォリオ">
+    <link rel="canonical" href="https://mixtuti.github.io/mixtuti">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mixtuti.github.io/mixtuti/img/IMG_0201.png">
+    <meta property="og:title" content="mixtuti | トップページ">
+    <meta property="og:description" content="トップページです。">
+    <meta property="og:url" content="https://mixtuti.github.io/mixtuti">
+    <meta property="og:site_name" content="mixtuti | トップページ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="mixtuti_mochi">
+    <!-- SEO END -->
     <!-- InstanceEndEditable -->
     <!-- Stylesheet  ============================================= -->
-    <link
-        href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
-        rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <!-- InstanceBeginEditable name="edit" -->
-    <link href="../mixtuti/css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="img/favcon.png">
     <!-- InstanceEndEditable -->
     <!-- Document Title　============================================= -->
     <!-- InstanceBeginEditable name="doctitle" -->
     <title>mixtuti | トップページ</title>
     <!-- InstanceEndEditable -->
+    <style id="loftloader-lite-custom-bg-color">
+        #loftloader-wrapper .loader-section {
+            background: #fff;
+        }
+    </style>
+    <style id="loftloader-lite-custom-bg-opacity">
+        #loftloader-wrapper .loader-section {
+            opacity: 1;
+        }
+    </style>
+    <style id="loftloader-lite-custom-loader">
+        #loftloader-wrapper.pl-imgloading #loader {
+            width: 76px;
+        }
+    
+        #loftloader-wrapper.pl-imgloading #loader span {
+            background-size: cover;
+            background-image: url(https://mixtuti.github.io/mixtuti/img/nikukyu.png);
+        }
+    </style>
 </head>
 
-<body>
+<body class="home blog loftloader-lite-enabled">
+    <script data-cfasync="false" data-no-defer="1">var ewww_webp_supported = false;</script>
+    <div id="loftloader-wrapper" class="pl-imgloading" data-show-close-time="5000" data-max-load-time="60000">
+        <div class="loader-section section-up"></div>
+        <div class="loader-section section-down"></div>
+        <div class="loader-inner">
+            <div id="loader">
+                <div class="imgloading-container"><span class="lazyload"
+                        data-back="https://mixtuti.github.io/mixtuti/img/nikukyu.png"></span>
+                </div><img width="76" height="59" data-no-lazy="1" class="skip-lazy" alt="loader image"
+                    src="https://mixtuti.github.io/mixtuti/img/nikukyu.png">
+            </div>
+        </div>
+        <div class="loader-close-button" style="display: none;"><span class="screen-reader-text">Close</span></div>
+    </div>
     <!-- InstanceBeginEditable name="head" -->
     <header>
         <div class="Two-column">
@@ -316,6 +363,7 @@
     <script src="js/pagetop.js"></script>
     <script src="js/chart.js"></script>
     <script src="js/emoji.js"></script>
+    <script type='text/javascript' src='js/loader.js' id='loftloader-lite-front-main-js'></script>
     <script>
         var ctx = document.getElementById("myChart");
         var myChart = new Chart(ctx, {
