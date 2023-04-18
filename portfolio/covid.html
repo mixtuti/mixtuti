@@ -114,14 +114,14 @@
 
             <p>このゲームはC++言語の授業で制作したゲームです。テーマは、「コロナウイルス」です。主要制作期間は約１週間です。このゲーム完成後に実際に自分も罹りました。</p>
 
-            <h3>・概要</h3>
+            <h3><img class="emoji" src="../img/nikukyu.svg">概要</h3>
             <p>襲いかかってくるコロナウイルスを撃退しながら、感染しないようにする3Dシューティングゲームです。体をまもる免疫系としてコロナウイルスに感染しないようにします。偶に、ワクチンが出現し、取得するとHPが回復します。</p>
             <p>ゲームルールは、敵に当たらないようにひたすら弾を撃つという感じになっています。空中にワクチンが出現することがあるので、これをとるとHPが回復します。HPが0になるとゲームオーバーになります。ゲームオーバーになるまで、ウイルスを退治して、スコアを稼いでください。</p>
             
-            <h3>・操作方法</h3>
+            <h3><img class="emoji" src="../img/nikukyu.svg">操作方法</h3>
             <p>タイトル画面では、何かしらのキーを押すことで画面が切り替わります。ステージ画面では、Sキーを押すことでゲームが開始されます。矢印キーで移動とカメラ回転ができます。Zキーを押すと弾を発射することができます。スペースキーでジャンプできます。</p>
             
-            <h3>・スクリーンショット</h3>
+            <h3><img class="emoji" src="../img/nikukyu.svg">スクリーンショット</h3>
             <ul class="slider">
                 <li><img src="../img/IMG_0151.png" alt=""></li>
                 <li><img src="../img/IMG_0154.png" alt=""></li>
@@ -129,18 +129,26 @@
                 <li><img src="../img/IMG_0156.png" alt=""></li>
             </ul>
 
-            <h3>・ソースコード</h3>
+            <h3><img class="emoji" src="../img/nikukyu.svg">ソースコード</h3>
+            <p>せっかくなのでソースコードの一部を紹介します。</p>
             <div class="Two-column">
                 <div class="left">
-                    <p>せっかくなのでソースコードの一部を紹介します。</p>
-                    <p>下は、プレイヤーオブジェクトの移動についてのプログラムです。基本的に押したキーに応じてフラグ管理を行い、移動方向や、向きを制御しています。</p>
                     <script src="https://gist.github.com/mixtuti/7c45461aa5ab8a0b152799f148bcbd19.js"></script>
                 </div>
                 <div class="right">
-                    <p>下のスクリプトは、敵の動きと追加についてです。敵は常にプレイヤーの方に向かうようにしています。出現は、timeで管理しています。</p>
-                    <script src="https://gist.github.com/mixtuti/7d561e9b1019e039357bcd844df2a05a.js"></script>
+                    <p>このスクリプトは、プレイヤーオブジェクトの移動についてのプログラムです。基本的に押したキーに応じてフラグ管理を行い、移動方向や、向きを制御しています。</p>
                 </div>
             </div>
+            <hr>
+            <div class="Two-column">
+                <div class="lfet">
+                    <script src="https://gist.github.com/mixtuti/7d561e9b1019e039357bcd844df2a05a.js"></script>
+                </div>
+                <div class="right">
+                    <p>このスクリプトは、敵の動きと追加についてです。敵は常にプレイヤーの方に向かうようにしています。出現は、timeで管理しています。</p>
+                </div>
+            </div>
+            <p>ソースコード全文は、<a href="https://github.com/mixtuti/C-PE2022-Final"><u>github</u></a>に用意しています。</p>
         </section>
         <div id="pagetop" hidden>
             <img src="../img/IMG_0166.png" width="80">
@@ -161,14 +169,12 @@
         </div>
     </footer>
     <!-- InstanceEndEditable -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="../js/slider.js"></script>
     <script src="../js/pagetop.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="../js/stkr.js"></script>
+    <script src="../js/emoji.js"></script>
 </body>
 <!-- InstanceEnd -->
 
