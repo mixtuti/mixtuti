@@ -1770,3 +1770,8 @@ textarea.c-form__input {
     opacity: 0;
   }
 }
+
+.emoji {
+  all: initial;
+  vertical-align: text-bottom;
+}
