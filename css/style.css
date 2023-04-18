@@ -2735,3 +2735,40 @@ body {
   background-size: cover;
   background-image: url(https://mixtuti.github.io/mixtuti/img/nikukyu.png);
 }
+
+/* ランダム */
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article {
+  width: 20%;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.article img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.article h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.article p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .article {
+    width: 80%;
+  }
+}
