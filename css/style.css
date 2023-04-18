@@ -2720,3 +2720,18 @@ body {
   padding: 0 5px;
   font-size: 12px;
 }
+
+#loftloader-wrapper .loader-section {
+  background: #fff;
+}
+#loftloader-wrapper .loader-section {
+  opacity: 1;
+}
+#loftloader-wrapper.pl-imgloading #loader {
+  width: 76px;
+}
+
+#loftloader-wrapper.pl-imgloading #loader span {
+  background-size: cover;
+  background-image: url(https://mixtuti.github.io/mixtuti/img/nikukyu.png);
+}
