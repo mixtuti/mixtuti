@@ -2736,6 +2736,15 @@ body {
   background-image: url(https://mixtuti.github.io/mixtuti/img/nikukyu.png);
 }
 
+.loader-tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+}
+
 /* ランダム */
 
 .articles {
@@ -2765,6 +2774,10 @@ body {
 .article p {
   font-size: 1rem;
   margin: 10px 0;
+}
+
+.article:hover .target-title {
+  color: #999;
 }
 
 @media only screen and (max-width: 768px) {
