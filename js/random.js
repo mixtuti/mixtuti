@@ -205,7 +205,7 @@ randomArticles.forEach(index => {
     const articleHTML = `
     <div class="article">
     <img src="${article.image}" alt="${article.title}">
-    <h3>${article.title}</h3>
+    <h3 class="target-title">${article.title}</h3>
     <p>${article.description}</p>
     </div>
     `;
