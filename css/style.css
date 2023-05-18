@@ -58,29 +58,40 @@ p {
   margin: 10px 0 10px 0;
 }
 
-p::selection {
+::selection {
   color: #fff;
   background-color: #1abc9c;
 }
 
-td::selection {
+::-moz-selection {
   color: #fff;
   background-color: #1abc9c;
 }
 
-th::selection {
+::-webkit-selection {
   color: #fff;
   background-color: #1abc9c;
 }
 
-b::selection {
-  color: #fff;
-  background-color: #1abc9c;
+.select-blue ::selection {
+  background-color: #454586;
 }
 
-strong::selection {
-  color: #fff;
-  background-color: #1abc9c;
+.select-gray ::selection {
+  background-color: #888;
+}
+
+.select-purple ::selection {
+  background: #b4b1e8;
+}
+
+.select-red ::selection {
+  background: #e8b1b1;
+}
+
+.select-sky ::selection {
+  color: #000;
+  background: #5be2f4;
 }
 
 li {
@@ -106,11 +117,6 @@ li {
   width: 90%;
   margin: 5px auto;
   /*	background: #dff;*/
-}
-
-.choice::selection {
-  color: #fff;
-  background-color: #3abec1;
 }
 
 /* ----------------------------------------------------------------
