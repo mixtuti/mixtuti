@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>ニャンコクリッカー</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="cookie-container">
+            <img id="cookie" src="cookie.png" alt="Cookie">
+            <div id="clickCount">0 にゃんこ</div>
+        </div>
+        <div id="empty-container"></div>
+        <div id="upgrade-container">
+            <div id="upgrade-header">
+                <h2>アップグレード</h2>
+            </div>
+            <!-- <div class="upgrade-part" data-info="アップグレード1による効果を追加"> -->
+            <div class="upgrade-part">
+                <img src="upgrade1.png" alt="Upgrade 1" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">ニャンコ(水属性)</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        水属性のニャンコです。あなたのクリックを毎秒1匹のペースで手助けしてくれれます。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 10</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+            <div class="upgrade-part">
+                <img src="upgrade2.png" alt="Upgrade 2" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">ニャンコ(風属性)</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        風属性のニャンコです。あなたのクリック効率を2倍にしてくれます。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 200</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+            <div class="upgrade-part">
+                <img src="upgrade3.png" alt="Upgrade 3" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">ニャンコ(土属性)</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        土属性のニャンコです。水属性ニャンコの10倍の効率を誇ります。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 1000</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+            <div class="upgrade-part">
+                <img src="upgrade4.png" alt="Upgrade 4" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">ニャンコ(火属性)</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        火属性のニャンコです。あなたのクリック効率を5倍にしてくれます。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 10000</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+            <div class="upgrade-part">
+                <img src="upgrade5.png" alt="Upgrade 5" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">キングニャンコ</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        王様に成り上がったニャンコです。水属性ニャンコの200倍の効率を誇ります。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 50000</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+            <div class="upgrade-part">
+                <img src="upgrade6.png" alt="Upgrade 6" class="upgrade-image">
+                <div class="upgrade-info">
+                    <div class="upgrade-name">狼の威を借るニャンコ</div>
+                    <div class="upgrade-info upgrade-info-text">
+                        自分のことを偉いと思っているニャンコです。ニャンコの数を倍に増やします。こんなに盾がいるから安心だね。
+                    </div>
+                    <div class="upgrade-count">所持数: 0</div>
+                    <div class="upgrade-cost">Cost: 100000</div>
+                    <button class="buy-button">購入</button>
+                    <button class="sell-button">売却</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <script src="upgrade.js"></script>
+</body>
+
+</html>

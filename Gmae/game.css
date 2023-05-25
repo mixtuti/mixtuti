@@ -1,0 +1,183 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+#cookie-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: lightgray;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#cookie {
+  width: 100%;
+  height: auto;
+}
+
+#clickCount {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+#upgrade-container {
+  width: 30%;
+  overflow-y: auto;
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.upgrade-part {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #999;
+  width: 100%;
+}
+
+#upgrade-header,
+#upgrade-body {
+  width: 90%;
+}
+
+.upgrade-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.upgrade-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.upgrade-cost {
+  font-size: 14px;
+}
+
+#empty-container {
+  flex-grow: 1;
+  background-color: white;
+}
+
+#upgrade-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: lightgray;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#upgrade-header {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#upgrade-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#buyButton,
+#sellButton {
+  margin: 5px;
+}
+
+.upgrade-part {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#upgrade-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-button,
+.sell-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.sell-button {
+  background-color: #f44336;
+}
+
+.upgrade-part:hover::before {
+  content: attr(data-info);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  /* background-color: #000; */
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.upgrade-info-text {
+  position: absolute;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明の白色 */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  white-space: normal; /* テキストの改行を許可 */
+  word-wrap: break-word; /* 長い単語を折り返す */
+  font-size: 14px;
+  max-width: 120px; /* 吹き出しの最大幅 */
+  position: absolute;
+  bottom: 0px;
+  right: 0%;
+  z-index: 9999;
+}
+
+.upgrade-part:hover .upgrade-info-text {
+  display: block;
+}
