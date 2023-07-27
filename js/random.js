@@ -178,6 +178,21 @@ const articles = [
         image: "https://oecusoundserver.github.io/Cadence/img/kemo.png",
         title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/fattycat.html'>ふぁってぃ・きゃっと</a>",
         description: "This is the description of article 36."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0213.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/taikenkai.html'>作詞作曲体験会</a>",
+        description: "This is the description of article 37."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/favcon.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/htmlmaker.html'>HTML作成ツール</a>",
+        description: "This is the description of article 38."
+    },
+    {
+        image: "https://oecusoundserver.github.io/Cadence/img/ToyBox.png",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/c102.html'>ToyBox</a>",
+        description: "This is the description of article 39."
     }
 ];
 
