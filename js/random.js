@@ -193,6 +193,26 @@ const articles = [
         image: "https://oecusoundserver.github.io/Cadence/img/ToyBox.png",
         title: "<a href='https://oecusoundserver.github.io/Cadence/event/c102.html'>ToyBox</a>",
         description: "This is the description of article 39."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0231.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/synthclimb.html'>SYNTH CLIMB</a>",
+        description: "This is the description of article 40."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0236.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/boxhero.html'>箱勇者</a>",
+        description: "This is the description of article 41."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0242.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/synthclimb.html'>ゲーム日和</a>",
+        description: "This is the description of article 42."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/min.gif",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/synthclimb.html'>尻尾ふりふり</a>",
+        description: "This is the description of article 43."
     }
 ];
 
