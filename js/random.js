@@ -206,13 +206,18 @@ const articles = [
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0242.png",
-        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/synthclimb.html'>ゲーム日和</a>",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/game.html'>ゲーム日和</a>",
         description: "This is the description of article 42."
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/min.gif",
-        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/synthclimb.html'>尻尾ふりふり</a>",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/gif.html'>尻尾ふりふり</a>",
         description: "This is the description of article 43."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0244.png",
+        title: "<a href='https://nicogakusai.github.io/portal/10_utsushiyo.html'>東方ニコ楽祭・現世</a>",
+        description: "This is the description of article 44."
     }
 ];
 
