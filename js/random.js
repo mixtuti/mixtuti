@@ -230,24 +230,29 @@ const articles = [
         description: "This is the description of article 46."
     },
     {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0257.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/enemy2.html'>蛇狐獣・ラフィール</a>",
+        description: "This is the description of article 47."
+    },
+    {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0245.png",
         title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0005.html'>マリンルックな猫ちゃん</a>",
-        description: "This is the description of article 47."
+        description: "This is the description of article 48."
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0246.png",
         title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/nyankoropoooon.html'>ニャンコロポン！</a>",
-        description: "This is the description of article 48."
+        description: "This is the description of article 49."
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/favcon.png",
         title: "<a href='https://gist.github.com/mixtuti/ab927b3ba24b94ec4cf9cb8cda097f1b'>ゲームランチャー</a>",
-        description: "This is the description of article 49."
+        description: "This is the description of article 50."
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0248.png",
         title: "<a href=''>グラ・スライム</a>",
-        description: "This is the description of article 50."
+        description: "This is the description of article 51."
     },
 ];
 
