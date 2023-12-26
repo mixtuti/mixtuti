@@ -240,13 +240,13 @@ const articles = [
         description: "This is the description of article 48."
     },
     {
-        image: "https://mixtuti.github.io/mixtuti/img/IMG_0246.png",
+        image: "https://mixtuti.github.io/mixtuti/img/favcon.png",
         title: "<a href='https://gist.github.com/mixtuti/ab927b3ba24b94ec4cf9cb8cda097f1b'>ゲームランチャー</a>",
         description: "This is the description of article 49."
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0248.png",
-        title: "<a href='グラ・スライム</a>",
+        title: "<a href=''>グラ・スライム</a>",
         description: "This is the description of article 50."
     },
 ];
