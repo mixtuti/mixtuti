@@ -218,7 +218,37 @@ const articles = [
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0244.png",
         title: "<a href='https://nicogakusai.github.io/portal/10_utsushiyo.html'>東方ニコ楽祭・現世</a>",
         description: "This is the description of article 44."
-    }
+    },
+    {
+        image: "https://oecusoundserver.github.io/Cadence/img/PrettyFurry.png",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0004.html'>Pretty Furry VGM Remix Collection</a>",
+        description: "This is the description of article 45."
+    },
+    {
+        image: "https://oecusoundserver.github.io/Cadence/img/YouthfulBlue.png",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0005.html'>Youthful Blue</a>",
+        description: "This is the description of article 46."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0245.png",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0005.html'>マリンルックな猫ちゃん</a>",
+        description: "This is the description of article 47."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0246.png",
+        title: "<a href='https://mixtuti.github.io/mixtuti/portfolio/nyankoropoooon.html'>ニャンコロポン！</a>",
+        description: "This is the description of article 48."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0246.png",
+        title: "<a href='https://gist.github.com/mixtuti/ab927b3ba24b94ec4cf9cb8cda097f1b'>ゲームランチャー</a>",
+        description: "This is the description of article 49."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0248.png",
+        title: "<a href='グラ・スライム</a>",
+        description: "This is the description of article 50."
+    },
 ];
 
 const randomArticles = [];
