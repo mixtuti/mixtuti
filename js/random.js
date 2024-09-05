@@ -251,8 +251,33 @@ const articles = [
     },
     {
         image: "https://mixtuti.github.io/mixtuti/img/IMG_0248.png",
-        title: "<a href=''>グラ・スライム</a>",
+        title: "<a href='https://oishi-burobu.itch.io/fallingslime'>FallingSlime</a>",
         description: "This is the description of article 51."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0259.png",
+        title: "<a href='https://www.pixiv.net/artworks/114747796'>あけおめ～～</a>",
+        description: "This is the description of article 52."
+    },
+    {
+        image: "https://img.itch.zone/aW1nLzE1OTM2MDU2LnBuZw==/original/mHFVLh.png",
+        title: "<a href='https://bakugeki-studio.itch.io/prot-type'>PROT：TYPE</a>",
+        description: "This is the description of article 53."
+    },
+    {
+        image: "https://mixtuti.github.io/mixtuti/img/IMG_0260.png",
+        title: "<a href='https://www.pixiv.net/artworks/121527136'>ルルるくんとララらくん</a>",
+        description: "This is the description of article 54."
+    },
+    {
+        image: "https://oecusoundserver.github.io/Cadence/img/shintyoku.jpg",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0006.html'>進捗どうですか？</a>",
+        description: "This is the description of article 55."
+    },
+    {
+        image: "https://oecusoundserver.github.io/Cadence/img/touhou.png",
+        title: "<a href='https://oecusoundserver.github.io/Cadence/event/CAD-0007.html'>東方アレンジコンピアルバム(仮)</a>",
+        description: "This is the description of article 56."
     },
 ];
 
